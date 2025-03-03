@@ -1,0 +1,4 @@
+build/
+dist/
+st_on_hover_tabs/frontend/node_modules/
+streamlit_on_poc_tabs.egg-info/

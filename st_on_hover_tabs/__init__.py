@@ -2,7 +2,7 @@ import os
 import streamlit as st
 import streamlit.components.v1 as components
 
-_RELEASE = True
+_RELEASE = False
 
 if _RELEASE:
 
@@ -20,9 +20,9 @@ else:
     url="http://localhost:3001"
     )
 
-def on_hover_tabs(tabName, iconName, styles=None, default_choice=1, key=None):
+def on_hover_tabs(tabName, iconName, styles=None, default_choice=1, key=None,welcomeMessage="Welcome to VAI"):
     
-    component_value = _on_hover_tabs(tabName=tabName, iconName=iconName, styles=styles, key=key, default=tabName[default_choice])
+    component_value = _on_hover_tabs(tabName=tabName, iconName=iconName, styles=styles, key=key, default=tabName[default_choice],welcomeMessage=welcomeMessage)
     
     return component_value
 
@@ -35,6 +35,7 @@ if not _RELEASE:
     with st.sidebar:
          tabs = on_hover_tabs(tabName=['Dashboard', 'Money', 'Economy'], 
                               iconName=['dashboard', 'money', 'economy'], 
+                              welcomeMessage='VyStar AI - VAI',
                               key="1") ## create tabs for on hover navigation bar
 
     if tabs =='Dashboard':

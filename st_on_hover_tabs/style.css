@@ -1,16 +1,43 @@
 section[data-testid='stSidebar'] {
-    background-color: #111;
+    background: linear-gradient(180deg, rgba(0,56,136,1) 29%, rgba(2,94,210,1) 100%);
     flex-shrink: unset !important;
-    
 }
 
-@media(hover:hover) and (min-width: 600px) and (max-width: 769px){
+section[data-testid='stSidebar'][data-testid="stSidebar"][aria-expanded="false"] {
+    min-width: 95px !important;
+    max-width: 95px !important;
+    transform: translateX(0px);
+}
 
-    header[data-testid="stHeader"] {
+.tab-content {
+    background-color:  rgba(0,56,136,1);
+}
+
+/* [data-testid="stSidebar"] [aria-expanded="true"] section[data-testid='stSidebar'] {
+    height: 100%;
+    min-width:330px !important;
+    width: 330px !important;
+    margin-left: 305px;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    padding-top: 60px;
+    white-space: nowrap;
+} */
+
+
+
+/* @media (min-width: 600px) and (max-width: 769px){
+
+    [data-testid="stSidebar"] [aria-expanded="false"] header[data-testid="stHeader"] {
         display:none;
     }
 
-    section[data-testid='stSidebar'] {
+    [data-testid="stSidebar"] [aria-expanded="false"] section[data-testid='stSidebar'] {
         height: 100%;
         min-width:95px !important;
         width: 95px !important;
@@ -24,13 +51,14 @@ section[data-testid='stSidebar'] {
         transition: 0.5s ease;
         padding-top: 60px;
         white-space: nowrap;
+        transform:translateX(100px);
     }
 
-    section[data-testid='stSidebar']:hover{
+    [data-testid="stSidebar"] [aria-expanded="false"] section[data-testid='stSidebar']:hover{
         min-width: 330px !important;
         }
 
-    button[kind="header"] {
+    [data-testid="stSidebar"] [aria-expanded="false"] button[kind="header"] {
         display: none;
     }
 
@@ -40,13 +68,13 @@ section[data-testid='stSidebar'] {
 
 }
 
-@media(hover: hover) and (min-width: 769px){
+@media (min-width: 769px){
 
-    header[data-testid="stHeader"] {
+    [data-testid="stSidebar"] [aria-expanded="false"] header[data-testid="stHeader"] {
         display:none;
     }
 
-    section[data-testid='stSidebar'] {
+    [data-testid="stSidebar"] [aria-expanded="false"] section[data-testid='stSidebar'] {
         height: 100%;
         min-width:95px !important;
         width: 95px !important;
@@ -62,15 +90,19 @@ section[data-testid='stSidebar'] {
         white-space: nowrap;
     }
 
-    section[data-testid='stSidebar']:hover{
+    [data-testid="stSidebar"] [aria-expanded="false"] section[data-testid='stSidebar']:hover{
         min-width: 330px !important;
         }
 
-    button[kind="header"] {
+    [data-testid="stSidebar"] [aria-expanded="false"] button[kind="header"] {
         display: none;
     }
 
-    div[data-testid="collapsedControl"]{
+    div[data-testid="stSidebarCollapsedControl"]{
         display: none;
     }
-}
+
+    div[data-testid="stSidebarCollapseButton"]{
+        display: none;
+    }
+}*/

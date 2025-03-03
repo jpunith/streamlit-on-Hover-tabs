@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(
-    name="streamlit-on-Hover-tabs",
+    name="streamlit-on-poc-tabs",
     version="0.0.2",
     author="",
     author_email="",

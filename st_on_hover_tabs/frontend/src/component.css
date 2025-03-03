@@ -1,5 +1,5 @@
 .navtab {
-    background-color:#111;
+    background-color:transparent;
     color: #818181;
     font-size: 18px;
     transition: .3s;
@@ -8,6 +8,13 @@
     /* padding-top: 150px;   */
 }
 
+.tab-container {
+    
+}
+
+.tab-content {
+    background-color:  rgba(0,56,136,1);
+}
 
 /* This controls the list component that contains the icons and the labels */
 .tab {
